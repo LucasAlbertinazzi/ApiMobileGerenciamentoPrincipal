@@ -1,4 +1,4 @@
-﻿namespace API_AppPousada.Suporte
+﻿namespace API_AppGerenciamento.Suporte
 {
     public class Login
     {

@@ -1,4 +1,4 @@
-using API_AppPousada.Models;
+using API_AppGerenciamento.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Adicionar o DbContext ao contêiner
-builder.Services.AddDbContext<PousadaTesteContext>(options => options.UseNpgsql(connectionString));
+builder.Services.AddDbContext<GerenciamentoContext>(options => options.UseNpgsql(connectionString));
 
 var app = builder.Build();
 

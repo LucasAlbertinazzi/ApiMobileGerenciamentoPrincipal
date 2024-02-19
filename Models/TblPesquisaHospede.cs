@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace API_AppPousada.Models;
+namespace API_AppGerenciamento.Models;
 
 public partial class TblPesquisaHospede
 {
@@ -23,7 +23,7 @@ public partial class TblPesquisaHospede
 
     public int? ArrumacaoAcomodacao { get; set; }
 
-    public int? ConservacaoDaPousada { get; set; }
+    public int? ConservacaoDagerenciamento { get; set; }
 
     public int? Limpeza { get; set; }
 
@@ -43,5 +43,5 @@ public partial class TblPesquisaHospede
 
     public string? Loginuser { get; set; }
 
-    public string? ProcuraNaPousada { get; set; }
+    public string? ProcuraNagerenciamento { get; set; }
 }

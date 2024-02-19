@@ -1,16 +1,16 @@
-﻿using API_AppPousada.Models;
+﻿using API_AppGerenciamento.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace API_AppPousada.Controllers
+namespace API_AppGerenciamento.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class AppVersion : ControllerBase
     {
-        private readonly PousadaTesteContext _dbContext;
+        private readonly GerenciamentoContext _dbContext;
 
-        public AppVersion(PousadaTesteContext dbContext)
+        public AppVersion(GerenciamentoContext dbContext)
         {
             _dbContext = dbContext;
         }
@@ -19,9 +19,9 @@ namespace API_AppPousada.Controllers
         [Route("verifica-versao")]
         public async Task<IActionResult> VerificaVersao()
         {
-            var ultimaLinha = await _dbContext.TblAppPousadaPeNaTerraVersaos
-                                    .OrderByDescending(x => x.Id)
-                                    .FirstOrDefaultAsync();
+            var ultimaLinha = await _dbContext.TblAppGerenciamentoVersaos
+                                                .OrderByDescending(x => x.Id)
+                                                .FirstOrDefaultAsync();
 
             if (ultimaLinha == null)
             {
@@ -34,17 +34,17 @@ namespace API_AppPousada.Controllers
 
         [HttpPost]
         [Route("inserir-versao")]
-        public async Task<IActionResult> InserirVersao(TblAppPousadaPeNaTerraVersao versionInfo)
+        public async Task<IActionResult> InserirVersao(TblAppGerenciamentoVersao versionInfo)
         {
             try
             {
-                var novaVersao = new TblAppPousadaPeNaTerraVersao
+                var novaVersao = new TblAppGerenciamentoVersao
                 {
                     Versao = versionInfo.Versao,
                     Data = versionInfo.Data
                 };
 
-                _dbContext.TblAppPousadaPeNaTerraVersaos.Add(novaVersao);
+                _dbContext.TblAppGerenciamentoVersaos.Add(novaVersao);
                 await _dbContext.SaveChangesAsync();
 
                 return Ok(novaVersao);

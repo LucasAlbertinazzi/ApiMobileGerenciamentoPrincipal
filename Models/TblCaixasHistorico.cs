@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace API_AppPousada.Models;
+namespace API_AppGerenciamento.Models;
 
 /// <summary>
 /// aqui há um registro das operações que mudaram os valores dos caixas, como pagamentos e transferências.

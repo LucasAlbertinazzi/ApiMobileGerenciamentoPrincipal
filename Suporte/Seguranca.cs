@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace API_AppPousada.Suporte
+namespace API_AppGerenciamento.Suporte
 {
     public static class Seguranca
     {

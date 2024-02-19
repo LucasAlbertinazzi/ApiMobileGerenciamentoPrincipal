@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace API_AppPousada.Models;
+namespace API_AppGerenciamento.Models;
 
 /// <summary>
-/// dados das pousadas
+/// dados das gerenciamentos
 /// </summary>
-public partial class TblPousada
+public partial class Tblgerenciamento
 {
-    public int IdPousada { get; set; }
+    public int Idgerenciamento { get; set; }
 
     public string? Cnpj { get; set; }
 

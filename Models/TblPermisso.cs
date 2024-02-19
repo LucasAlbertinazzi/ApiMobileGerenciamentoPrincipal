@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace API_AppPousada.Models;
+namespace API_AppGerenciamento.Models;
 
 /// <summary>
 /// tabela com permissoes especiais de acesso do sistema

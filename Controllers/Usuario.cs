@@ -1,17 +1,17 @@
-﻿using API_AppPousada.Models;
-using API_AppPousada.Suporte;
+﻿using API_AppGerenciamento.Models;
+using API_AppGerenciamento.Suporte;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace API_AppPousada.Controllers
+namespace API_AppGerenciamento.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class Usuario : ControllerBase
     {
-        private readonly PousadaTesteContext _dbContext;
+        private readonly GerenciamentoContext _dbContext;
 
-        public Usuario(PousadaTesteContext dbContext)
+        public Usuario(GerenciamentoContext dbContext)
         {
             _dbContext = dbContext;
         }

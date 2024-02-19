@@ -2,7 +2,7 @@
 using System.Net;
 using System.Runtime.InteropServices;
 
-namespace API_AppPousada.Suporte
+namespace API_AppGerenciamento.Suporte
 {
     public class NetworkConnection : IDisposable
     {

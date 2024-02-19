@@ -1,14 +1,14 @@
-﻿using API_AppPousada.Suporte;
+﻿using API_AppGerenciamento.Suporte;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace API_AppPousada.Controllers
+namespace API_AppGerenciamento.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class EnviaArquivos : ControllerBase
     {
-        private string path = "\\\\192.168.85.3\\sistema_pousada\\IMAGENS\\ImgAppEstoque\\";
+        private string path = "\\\\192.168.85.3\\sistema_gerenciamento\\IMAGENS\\ImgAppEstoque\\";
 
         [HttpPost("upload")]
         public async Task<IActionResult> UploadImage(IFormFile imageFile)

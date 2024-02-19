@@ -1,29 +1,29 @@
-﻿using API_AppPousada.Models;
+﻿using API_AppGerenciamento.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace API_AppPousada.Controllers
+namespace API_AppGerenciamento.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class MenuPrincipal : ControllerBase
     {
-        private readonly PousadaTesteContext _dbContext;
+        private readonly GerenciamentoContext _dbContext;
 
-        public MenuPrincipal(PousadaTesteContext dbContext)
+        public MenuPrincipal(GerenciamentoContext dbContext)
         {
             _dbContext = dbContext;
         }
 
         [HttpGet]
         [Route("menu-principal")]
-        public async Task<List<TblAppPousadaPeNaTerraMenuPrincipal>> ItensMenuPrincipal(string func)
+        public async Task<List<TblAppgerenciamentoPeNaTerraMenuPrincipal>> ItensMenuPrincipal(string func)
         {
             try
             {
                 if (!string.IsNullOrEmpty(func))
                 {
-                    return await _dbContext.TblAppPousadaPeNaTerraMenuPrincipals
+                    return await _dbContext.TblAppgerenciamentoPeNaTerraMenuPrincipals
                                  .Where(x => x.BtnAtivo == true && (x.DepPermitidos.Contains(func) || x.DepPermitidos.Contains("0")))
                                  .ToListAsync();
                 }

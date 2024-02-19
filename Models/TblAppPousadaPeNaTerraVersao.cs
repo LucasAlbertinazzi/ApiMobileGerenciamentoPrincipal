@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace API_AppPousada.Models;
+namespace API_AppGerenciamento.Models;
 
-public partial class TblAppPousadaPeNaTerraVersao
+public partial class TblAppGerenciamentoVersao
 {
     public int Id { get; set; }
 

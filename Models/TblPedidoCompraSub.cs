@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace API_AppPousada.Models;
+namespace API_AppGerenciamento.Models;
 
 /// <summary>
 /// detalhes adicionais do pedido de compra, com dados das despesas, investimentos, emprestimos 
